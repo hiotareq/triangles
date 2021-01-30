@@ -12,18 +12,28 @@ namespace geometry_objects {
         Point(const Point& p) = default;
         Point& operator=(const Point& p) = default;
 
-        float get_x() const;
-        float get_y() const;
-        float get_z() const;
+        float getX() const;
+        float getY() const;
+        float getZ() const;
 
         bool operator==(const Point& other) const;
 
-        void set_x(float new_x);
-        void set_y(float new_y);
-        void set_z(float new_z);
+        void setX(float new_x);
+        void setY(float new_y);
+        void setZ(float new_z);
 
     private:
         float _x,_y,_z;
+    };
+
+    class triangle{
+        Point p_1, p_2, p_3;
+    public:
+        triangle() = delete;
+        triangle(const Point& point_1, const Point& point_2, const Point& point_3);
+        ~triangle() = default;
+        
+        bool isDegenerate();
     };
 
     class Vector3D {
@@ -72,9 +82,28 @@ namespace geometry_objects {
 
         //cross product
         Vector3D operator%(const Vector3D &other) const;
-
     };
+
+    class Line{
+        //point on the line
+        Point line_point;
+
+        //directing vector of the line
+        Vector3D line_vector;
+    };
+
+    class Plane{
+        //point on the plane
+        Point plane_point;
+
+        //normal vector to the plane
+        Vector3D norm_vector;
+    };
+
+
 };
+
+geometry_objects::Vector3D operator*(float number, const geometry_objects::Vector3D& v);
 
 
 #endif //TRIANGLES_GEOMETRY_OBJECTS_H
