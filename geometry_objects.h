@@ -137,3 +137,4 @@ namespace geometry_objects {
 geometry_objects::Vector3D operator*(float number, const geometry_objects::Vector3D &);
 
 #endif //TRIANGLES_GEOMETRY_OBJECTS_H
+

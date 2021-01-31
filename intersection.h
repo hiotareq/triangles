@@ -10,4 +10,5 @@ static int sign(float a);
 //that is the distance multiplied by the length of the norm vector
 static float SignedDistancePointToPlane(const geometry_objects::Point &point, const geometry_objects::Plane &plane);
 
+
 #endif //TRIANGLES_INTERSECTION_H

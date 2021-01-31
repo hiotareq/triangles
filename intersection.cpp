@@ -26,7 +26,6 @@ bool IsIntersect(const geometry_objects::Triangle &tr0, const geometry_objects::
 
     if (signed_distance00 * signed_distance01 > 0 && signed_distance01 * signed_distance02 > 0) return false;
 
-
 }
 
 float SignedDistancePointToPlane(const geometry_objects::Point &point, const geometry_objects::Plane &plane) {
